@@ -15,7 +15,9 @@
     "wave",
     "skeleton-animation",
     "youtube-loading",
-    "facebook-loading"
+    "facebook-loading",
+    "skeleton-text",
+    "skeleton-image"
   ],
   "license": "MIT",
   "repository": {

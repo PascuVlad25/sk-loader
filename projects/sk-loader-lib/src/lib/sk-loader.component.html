@@ -4,6 +4,10 @@
         [rowsNumber]="rowsNumber"
         [align]="align"
         [indent]="indent"
+        [isAnimated]="isAnimated"
     ></sk-loader-paragraph>
-    <sk-loader-image *ngSwitchCase="getImageLoaderType()"></sk-loader-image>
+    <sk-loader-image 
+        *ngSwitchCase="getImageLoaderType()"
+        [isAnimated]="isAnimated"
+    ></sk-loader-image>
 </ng-container>

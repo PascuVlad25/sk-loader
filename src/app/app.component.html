@@ -1,37 +1,43 @@
-
-<div class="header-container">
-    <div>Title Lorem Ipsum dolores Cristina stie!</div>
-    <sk-loader [rowsNumber]="2"></sk-loader>
-</div>
-
-<div class="card-container">
-
-    <div class="card">
-        <div class="image">
-            <sk-loader loaderType="image"></sk-loader>
+<div class="main-container">
+    <div class="side-container">
+        <div class="header-container">
+            <div>Highly customizable skeleton loader component</div>
         </div>
-        <div class="title">
-            <sk-loader [rowsNumber]="2" [align]="'center'"></sk-loader>
+        <div class="card-container">
+            <div class="card">
+                <img class="image" src="https://vladpascu.com/dist/images/portrait-light.png">
+                <div class="title">My first npm published library</div>
+                <p>I made this Angular skeleton loader component library with customization and adaptability in mind.
+                    Don't be afraid to make your loader unique!
+                </p>
+            </div>
         </div>
-        <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
+        <div class="paragraph-container">
+            You can customize everything from colors of the background and the moving highlight, to the horizontal
+            alignment of the loader relative to its container. You can change even the border-radius or the line-height size in order 
+            to replicate as much as possible the final loaded interface of your page. I hope this library will add to your app that small detail 
+            that makes the difference for your users. You cannot make always the server requests snappier, but you always can display a shiny loading
+            effects! 😉
+
+        </div>
     </div>
-    
-    <div class="card">
-        <img class="image" src="https://i.pinimg.com/736x/ab/13/10/ab1310c11f5f280ace9523f896ac1d56.jpg">
-        <div class="title">Lorem Ipsum is simply dummy text</div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever sincer</p>
+    <div class="side-container">
+        <div class="header-container">
+            <sk-loader [rowsNumber]="2"></sk-loader>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="image">
+                    <sk-loader loaderType="image"></sk-loader>
+                </div>
+                <div class="title">
+                    <sk-loader [rowsNumber]="2" [align]="'center'"></sk-loader>
+                </div>
+                <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
+            </div>
+        </div>
+        <div class="paragraph-container">
+            <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
+        </div>
     </div>
 </div>
-
-<p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever sincer
-    Loremiums Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever sincee 
-    theremop 15 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dum
-</p>
-<p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-</p>

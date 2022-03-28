@@ -12,6 +12,7 @@ export class SkParagraphComponent implements OnInit {
   @Input() rowsNumber: number = 3;
   @Input() align: Alignment = AlignmentType.Left;
   @Input() indent: boolean = false;
+  @Input() isAnimated: boolean = true;
 
   ngOnInit(): void {
     this.createRows();

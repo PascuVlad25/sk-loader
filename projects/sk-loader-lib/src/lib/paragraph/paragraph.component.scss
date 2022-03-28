@@ -1,4 +1,4 @@
-@import '../../assets/styles.scss';
+@use '../../assets/styles.scss';
 
 :host {
     width: 100%;
@@ -13,6 +13,6 @@
 
     .sk-paragraph-row {
         height: 0.8em;
-        border-radius: 0.3em;
+        border-radius: var(--sk-loader-border-radius);
     }
 }

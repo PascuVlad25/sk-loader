@@ -1,13 +1,20 @@
 
 
-$background: #c0c0c0;
+::ng-deep body {
+    --sk-loader-background: #ddd;
+    --sk-loader-highlight: rgba(255, 255, 255, 0),
+                           rgba(255, 255, 255, 0.6),
+                           rgba(255, 255, 255, 0);
+    --sk-loader-border-radius: 0.3em;
+    --sk-loader-animation-time: 2s;
+}
 
 .sk-loader {
-    background-color: $background;
+    background-color: var(--sk-loader-background);
     position: relative;
     overflow: hidden;
 
-    &:before {
+    &.animated:before {
         content: '';
         position: absolute;
         top: 0;
@@ -17,11 +24,9 @@ $background: #c0c0c0;
         height: 100%;
         background-image: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0.6),
-            rgba(255, 255, 255, 0)
+            var(--sk-loader-highlight)
             );
-        animation: wave 2s ease-in-out infinite;
+        animation: wave var(--sk-loader-animation-time) ease-in-out infinite;
     }
 }
 
