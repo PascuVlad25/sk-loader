@@ -1,0 +1,9 @@
+<ng-container [ngSwitch]="loaderType">
+    <sk-loader-paragraph 
+        *ngSwitchCase="getParagraphLoaderType()"
+        [rowsNumber]="rowsNumber"
+        [align]="align"
+        [indent]="indent"
+    ></sk-loader-paragraph>
+    <sk-loader-image *ngSwitchCase="getImageLoaderType()"></sk-loader-image>
+</ng-container>

@@ -1,0 +1,36 @@
+{
+  "name": "sk-loader",
+  "version": "1.0.0",
+  "title": "sk-loader",
+  "description": "Highly customizable skeleton loader component for Angular applications.",
+  "keywords": [
+    "skeleton",
+    "loader",
+    "sk-loader",
+    "custom-loader",
+    "loading",
+    "angular",
+    "placeholder",
+    "static",
+    "wave",
+    "skeleton-animation",
+    "youtube-loading",
+    "facebook-loading"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PascuVlad25/sk-loader.git"
+  },
+  "author": {
+    "name": "PascuVlad25",
+    "url": "https://github.com/PascuVlad25"
+  },
+  "peerDependencies": {
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

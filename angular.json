@@ -105,7 +105,38 @@
           }
         }
       }
+    },
+    "sk-loader-lib": {
+      "projectType": "library",
+      "root": "projects/sk-loader-lib",
+      "sourceRoot": "projects/sk-loader-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sk-loader-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sk-loader-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sk-loader-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sk-loader-lib/src/test.ts",
+            "tsConfig": "projects/sk-loader-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/sk-loader-lib/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "sk-loader"
+  "defaultProject": "sk-loader-lib"
 }

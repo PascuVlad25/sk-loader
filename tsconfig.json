@@ -16,6 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "sk-loader": [
+        "dist/sk-loader/sk-loader",
+        "dist/sk-loader"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [
