@@ -1,6 +1,6 @@
 {
   "name": "sk-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "sk-loader",
   "description": "Highly customizable skeleton loader component for Angular applications.",
   "keywords": [
@@ -28,6 +28,7 @@
     "name": "PascuVlad25",
     "url": "https://github.com/PascuVlad25"
   },
+  "homepage": "https://vladpascu.com/sk-loader/",
   "peerDependencies": {
     "@angular/common": "^13.1.0",
     "@angular/core": "^13.1.0"
