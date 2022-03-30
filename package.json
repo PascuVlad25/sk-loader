@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:sk-loader": "ng build sk-loader-lib --configuration=production"
+    "build:sk-loader": "ng build sk-loader-lib --configuration=production",
+    "build-prod": "ng build --configuration=production --base-href=https://vladpascu.com/sk-loader/ & rimraf docs & move dist/sk-loader docs"
   },
   "private": true,
   "dependencies": {
