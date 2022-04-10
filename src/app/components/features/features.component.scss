@@ -30,15 +30,17 @@
 
             .feature {
                 display: grid;
-                grid-template-columns: 30px 200px;
+                grid-template-columns: 50px 200px;
                 grid-template-rows: max-content 1fr;
                 gap: 10px;
     
                 .icon {
-                    width: 30px;
-                    height: 30px;
-                    background-color: white;
-                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    background-color: var(--secondary-color-tint);
+                    box-sizing: border-box;
+                    padding: 10px;
+                    border-radius: 10px;
                 }
     
                 .feature-header {
