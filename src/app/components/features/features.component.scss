@@ -8,14 +8,15 @@
         flex-direction: column;
         align-items: center;
         box-sizing: border-box;
-        padding: 4rem 0 6rem 0;
+        padding: 4em 0 6em 0;
         background-color: var(--secondary-color-shade);
         box-shadow: 0 25px 60px -30px var(--secondary-color);
         border-radius: 20px;
+        font-size: 20px;
         color: white;
 
         .features-title {
-            font-size: 2.5rem;
+            font-size: 2.5em;
             margin: 0 0 1.5em 0;
             background-color: var(--secondary-color-tint);
             padding: 10px 20px;
@@ -25,7 +26,7 @@
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(1, max-content);
-            gap: 4rem;
+            gap: 4em;
 
             .feature {
                 display: grid;
@@ -44,13 +45,13 @@
                     grid-column-start: 2;
                     display: flex;
                     align-items: center;
-                    font-size: 1.2rem;
+                    font-size: 1.2em;
                     font-weight: 700;
                 }
     
                 .feature-description {
                     grid-column-start: 2;
-                    font-size: 0.8rem;
+                    font-size: 0.8em;
                 }
             }
         }
@@ -60,6 +61,7 @@
 
 @media only screen and (min-width: 768px) {
     .features-section .features-content {
+        font-size: 16px;
 
         .feature-grid {
             grid-template-columns: repeat(2, max-content);
