@@ -7,6 +7,10 @@ html {
 body {
     margin: 0;
 
+    a {
+        text-decoration: none;
+    }
+
     // colors
     --primary-color: #f37d3e;
     --primary-color-shade: #d6692e;
