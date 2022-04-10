@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sk-loader';
+  isVisible = false;
+
+  switch(): void {
+    this.isVisible = !this.isVisible;
+  }
 }

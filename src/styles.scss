@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {    
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    // colors
+    --primary-color: #f37d3e;
+    --primary-color-shade: #d6692e;
+    --secondary-color: #4641e0;
+    --secondary-color-tint: #5752ee;
+    --secondary-color-shade: #433eb2;
+    --navbar-background-color: var(--secondary-color);
+    --hero-background-color: white;
+    --gray-background-color: #f3f3f3;
+    --text-color: white; // rgb(25, 25, 25);
+    --text-hover-color: rgb(246, 246, 246);
+
+    // font
+    --font-family: 'Roboto', sans-serif;
+
+    @media only screen and (max-width: 768px) {
+        --content-max-width: 90vw;
+    }
+
+    @media only screen and (min-width: 768px) {        
+        --content-max-width: 80vw;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        --content-max-width: 70vw;
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background-color: var(--navbar-background-color);
+}
+
+.container {    
+    width: 100%;
+
+    .content {        
+        width: 100%;
+        max-width: var(--content-max-width);
+        margin: 0 auto;
+    }
+}
+
+.main-container {
+    font-family: var(--font-family);
+    background-color: var(--gray-background-color);
+
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-container {
+        width: 80%;
+        padding-left: 30px;
+        margin-bottom: 50px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 70px;
+    
+        .card {
+            font-size: 16px;
+            width: 300px;
+            height: 410px;
+            padding: 30px;
+            margin: 0 20px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: rgba(76, 76, 80, 0.1) 0px 30px 70px -10px, rgba(0, 0, 0, 0.2) 0px 20px 40px -30px;
+            box-sizing: border-box;
+
+            .image {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+    
+            .title {
+                font-size: 20px;
+                text-align: center;
+                font-weight: 600;
+                margin-bottom: 25px;
+            }
+
+            p {
+                line-height: 22px;
+                text-indent: 15px;
+            }
+        }
+    }
+
+    .paragraph-container {
+        padding-left: 30px;
+        text-indent: 40px;
+    }
+}

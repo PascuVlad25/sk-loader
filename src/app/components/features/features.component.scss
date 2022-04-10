@@ -1,0 +1,78 @@
+
+.features-section {
+    background-color: var(--hero-background-color);
+    padding-bottom: 15vh;
+
+    .features-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 4rem 0 6rem 0;
+        background-color: var(--secondary-color-shade);
+        box-shadow: 0 25px 60px -30px var(--secondary-color);
+        border-radius: 20px;
+        color: white;
+
+        .features-title {
+            font-size: 2.5rem;
+            margin: 0 0 1.5em 0;
+            background-color: var(--secondary-color-tint);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(1, max-content);
+            gap: 4rem;
+
+            .feature {
+                display: grid;
+                grid-template-columns: 30px 200px;
+                grid-template-rows: max-content 1fr;
+                gap: 10px;
+    
+                .icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: white;
+                    border-radius: 50%;
+                }
+    
+                .feature-header {
+                    grid-column-start: 2;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+    
+                .feature-description {
+                    grid-column-start: 2;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .features-section .features-content {
+
+        .feature-grid {
+            grid-template-columns: repeat(2, max-content);
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1300px) {
+    .features-section .features-content {
+
+        .feature-grid {
+            grid-template-columns: repeat(3, max-content);
+        }
+    }
+}

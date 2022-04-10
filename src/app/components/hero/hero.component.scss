@@ -1,0 +1,99 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    padding-top: calc(70px + 10vh);
+    padding-bottom: 10vh;
+    box-sizing: border-box;
+    background-color: var(--hero-background-color);
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-text-container {
+            width: 450px;
+            display: flex;
+            margin-bottom: 5vh;
+            flex-direction: column;
+            text-align: center;
+
+            .title {
+                font-size: 3rem;
+                margin: 0;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .buttons-container button {
+                all: unset;
+                cursor: pointer;
+                margin-top: 20px;
+                padding: 15px 25px;
+                color: white;
+                border-radius: 6px;
+                margin-right: 15px;
+
+                &.primary {
+                    background-color: var(--primary-color);
+                    
+                    &:hover {                    
+                        background-color: var(--primary-color-shade);
+                    }
+                }                
+
+                &.secondary {
+                    background-color: var(--secondary-color);
+                    
+                    &:hover {                    
+                        background-color: var(--secondary-color-shade);
+                    }
+                }
+            }
+        }
+
+        .hero-image-container {
+            width: 100%;
+            min-height: 500px;
+            height: 50vh;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #d5d5d5;
+
+            img {
+                width: 100%;
+                max-height: 40vh;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .hero-section {        
+        padding-top: 70px;
+        padding-bottom: 0;
+
+        .hero-content {
+            flex-direction: row;
+    
+            .hero-text-container {
+                text-align: start;
+                margin-bottom: 0;
+            }
+
+            .hero-image-container {
+                width: 50%;
+            }
+        }
+    } 
+}
+
+@media only screen and (min-width: 1600px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+}

@@ -1,0 +1,26 @@
+<section id="examples" class="container examples-section">
+    <div class="content examples-content">
+        <h2 class="examples-title">Examples</h2>
+        <p class="examples-subtitle">Some dummy text we will use npm for that.</p>
+        
+
+        <div class="header-container">
+            <sk-loader [rowsNumber]="2"></sk-loader>
+        </div>
+        <div class="card-container">
+            <div *ngFor="let card of cards" class="card">
+                <div class="image">
+                    <sk-loader loaderType="image"></sk-loader>
+                </div>
+                <div class="title">
+                    <sk-loader [rowsNumber]="2" [align]="'center'"></sk-loader>
+                </div>
+                <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
+            </div>
+        </div>
+        <div class="paragraph-container">
+            <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
+        </div>
+    </div>
+</section>
+

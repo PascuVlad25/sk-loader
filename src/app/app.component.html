@@ -1,43 +1,5 @@
-<div class="main-container">
-    <div class="side-container">
-        <div class="header-container">
-            <div>Highly customizable skeleton loader component</div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <img class="image" src="https://vladpascu.com/dist/images/portrait-light.png">
-                <div class="title">My first npm published library</div>
-                <p>I made this Angular skeleton loader component library with customization and adaptability in mind.
-                    Don't be afraid to make your loader unique!
-                </p>
-            </div>
-        </div>
-        <div class="paragraph-container">
-            You can customize everything from colors of the background and the moving highlight, to the horizontal
-            alignment of the loader relative to its container. You can change even the border-radius or the line-height size in order 
-            to replicate as much as possible the final loaded interface of your page. I hope this library will add to your app that small detail 
-            that makes the difference for your users. You cannot make always the server requests snappier, but you always can display a shiny loading
-            effects! 😉
 
-        </div>
-    </div>
-    <div class="side-container">
-        <div class="header-container">
-            <sk-loader [rowsNumber]="2"></sk-loader>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="image">
-                    <sk-loader loaderType="image"></sk-loader>
-                </div>
-                <div class="title">
-                    <sk-loader [rowsNumber]="2" [align]="'center'"></sk-loader>
-                </div>
-                <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
-            </div>
-        </div>
-        <div class="paragraph-container">
-            <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
-        </div>
-    </div>
+<app-navbar class="navbar"></app-navbar>
+<div class="main-container">
+    <app-presentation></app-presentation>
 </div>
