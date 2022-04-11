@@ -1,0 +1,27 @@
+
+
+.documentation-section {
+    padding-bottom: 25vh;
+
+    .documentation-header-container {
+        width: 50%;
+        margin: 2em 0 1em 0;
+        padding-left: 30px;
+        font-size: 28px;
+    }
+
+    .paragraph-container {
+        margin-bottom: 2em 0;
+    }
+
+    .documentation-image-container {
+        display: flex;
+        justify-content: center;
+        margin: 2em 0;
+
+        sk-loader {
+            height: 250px;
+            width: 60%;
+        }
+    }
+}

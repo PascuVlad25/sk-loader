@@ -13,6 +13,7 @@ body {
 
     // colors
     --primary-color: #f37d3e;
+    --primary-color-tint: #f98c51;
     --primary-color-shade: #d6692e;
     --secondary-color: #4641e0;
     --secondary-color-tint: #5752ee;
@@ -20,7 +21,8 @@ body {
     --navbar-background-color: var(--secondary-color);
     --hero-background-color: white;
     --gray-background-color: #f3f3f3;
-    --text-color: white; // rgb(25, 25, 25);
+    --text-color: white;
+    --text-color-black: #191919;
     --text-hover-color: rgb(246, 246, 246);
 
     // font
@@ -52,11 +54,18 @@ body {
 
 .container {    
     width: 100%;
+    background-color: var(--gray-background-color);
+    padding: 10vh 0 5vh 0;
 
     .content {        
         width: 100%;
         max-width: var(--content-max-width);
         margin: 0 auto;
+
+        .title {
+            font-size: 3em;
+            margin: 0;
+        }
     }
 }
 

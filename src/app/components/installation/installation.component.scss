@@ -1,21 +1,10 @@
 
-.installation-section {
-    background-color: var(--gray-background-color);
-    padding: 10vh 0 5vh 0;
 
-    .installation-content {
-    
-        .installation-title {
-            margin: 0;
-            font-size: 3rem;
-        }
 
-        .code-container {
-            padding: 30px;
-            background-color: var(--secondary-color-shade);
-            color: white;
-            border-radius: 10px;
-            font-size: 1.2em;
-        }
-    }
+.code-container {
+    padding: 30px;
+    background-color: var(--secondary-color-shade);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
 }

@@ -29,9 +29,8 @@
                 font-size: 1.2em;
             }
 
-            .buttons-container button {
-                all: unset;
-                cursor: pointer;
+            .buttons-container .button {
+                display: inline-block;
                 margin-top: 20px;
                 padding: 15px 25px;
                 color: white;
@@ -45,13 +44,32 @@
                     &:hover {                    
                         background-color: var(--primary-color-shade);
                     }
-                }                
+                }
 
                 &.secondary {
                     background-color: var(--secondary-color);
+                    margin-right: 0;
                     
                     &:hover {                    
                         background-color: var(--secondary-color-shade);
+                    }
+                }
+
+                &.npm-button {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 7px 25px;
+                    margin-right: 0;
+                    margin-top: 15px;
+                    background-color: #CB0000;
+                    
+                    &:hover {                    
+                        background-color: #b20808;
+                    }
+
+                    img {
+                        margin-left: 10px;
                     }
                 }
             }

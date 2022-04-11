@@ -17,6 +17,11 @@ export class ComparatorComponent implements AfterViewInit {
   width = 50;
   private bound!: DOMRect;
   
+  @HostListener('window:dragstart', ['$event'])
+  onDragStart(event: MouseEvent){
+    event.preventDefault();
+  }
+  
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent){
     if (this.sliderStatus == SliderStatus.Moving && this.checkInBound(event.clientX)) {

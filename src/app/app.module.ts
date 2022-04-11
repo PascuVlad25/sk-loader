@@ -13,6 +13,8 @@ import { FeaturesComponent } from './components/features/features.component';
 import { InstallationComponent } from './components/installation/installation.component';
 import { ExamplesComponent } from './components/examples/examples.component';
 import { ComparatorComponent } from './components/comparator/comparator.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DocumentationComponent } from './components/documentation/documentation.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ComparatorComponent } from './components/comparator/comparator.componen
     FeaturesComponent,
     InstallationComponent,
     ExamplesComponent,
-    ComparatorComponent
+    ComparatorComponent,
+    FooterComponent,
+    DocumentationComponent
   ],
   imports: [
     BrowserModule,

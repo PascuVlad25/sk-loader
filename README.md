@@ -9,7 +9,7 @@ Highly customizable skeleton loader component for Angular applications.
 
 ## Installation
 ```shell
-npm install sk-loader --save
+npm install sk-loader
 ```
 
 ## Setup
