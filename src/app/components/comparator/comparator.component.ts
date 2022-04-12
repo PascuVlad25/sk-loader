@@ -19,12 +19,14 @@ export class ComparatorComponent implements AfterViewInit {
   
   @HostListener('window:dragstart', ['$event'])
   onDragStart(event: MouseEvent){
+    console.log('on drag', event)
     event.preventDefault();
   }
   
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent){
     if (this.sliderStatus == SliderStatus.Moving && this.checkInBound(event.clientX)) {
+      console.log('on mousemove', event)
       this.width = this.calculatePositionInPercentage(event.clientX);
     }
   }
@@ -39,10 +41,12 @@ export class ComparatorComponent implements AfterViewInit {
   }
 
   drag(): void {
+    console.log('SET MOVING');
     this.sliderStatus = SliderStatus.Moving;
   }
 
   leave(): void {
+    console.log('SET STATIC');
     this.sliderStatus = SliderStatus.Static;
   }
 

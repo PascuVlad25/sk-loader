@@ -4,7 +4,7 @@
     padding-bottom: 25vh;
 
     .documentation-header-container {
-        width: 50%;
+        width: 100%;
         margin: 2em 0 1em 0;
         padding-left: 30px;
         font-size: 28px;
@@ -23,5 +23,11 @@
             height: 250px;
             width: 60%;
         }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .documentation-section .documentation-header-container {
+        width: 50%;
     }
 }
