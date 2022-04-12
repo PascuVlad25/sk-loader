@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 enum SliderStatus {
   Static,
@@ -10,43 +10,33 @@ enum SliderStatus {
   templateUrl: './comparator.component.html',
   styleUrls: ['./comparator.component.scss']
 })
-export class ComparatorComponent implements AfterViewInit {
+export class ComparatorComponent {
   @ViewChild('container') container!: ElementRef;
 
   sliderStatus: SliderStatus = SliderStatus.Static;
   width = 50;
-  private bound!: DOMRect;
   
   @HostListener('window:dragstart', ['$event'])
   onDragStart(event: MouseEvent){
-    console.log('on drag', event)
     event.preventDefault();
   }
   
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent){
     if (this.sliderStatus == SliderStatus.Moving && this.checkInBound(event.clientX)) {
-      console.log('on mousemove', event)
       this.width = this.calculatePositionInPercentage(event.clientX);
     }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.setBound();
-  }
-
-  ngAfterViewInit(): void {
-    this.setBound();
+  get bound(): DOMRect {
+    return this.container?.nativeElement?.getBoundingClientRect() ?? {width: 0, right: 0, left: 0};
   }
 
   drag(): void {
-    console.log('SET MOVING');
     this.sliderStatus = SliderStatus.Moving;
   }
 
   leave(): void {
-    console.log('SET STATIC');
     this.sliderStatus = SliderStatus.Static;
   }
 
@@ -54,12 +44,7 @@ export class ComparatorComponent implements AfterViewInit {
     return `calc(${this.width}% - 5px)`;
   }
 
-  private setBound(): void {
-    this.bound = this.container.nativeElement.getBoundingClientRect();
-  }
-
   private checkInBound(xValue: number): boolean {
-    console.log('checkInBound', xValue, this.bound);
     return xValue > this.bound.left && xValue < this.bound.right;
   }
 
