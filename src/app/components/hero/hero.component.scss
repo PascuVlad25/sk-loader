@@ -42,7 +42,7 @@
                     background-color: var(--primary-color);
                     
                     &:hover {                    
-                        background-color: var(--primary-color-shade);
+                        background-color: var(--primary-color-tint);
                     }
                 }
 
@@ -51,7 +51,7 @@
                     margin-right: 0;
                     
                     &:hover {                    
-                        background-color: var(--secondary-color-shade);
+                        background-color: var(--secondary-color-tint);
                     }
                 }
 
@@ -65,7 +65,7 @@
                     background-color: #CB0000;
                     
                     &:hover {                    
-                        background-color: #b20808;
+                        background-color: #dd1919;
                     }
 
                     img {
