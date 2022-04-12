@@ -59,6 +59,7 @@ export class ComparatorComponent implements AfterViewInit {
   }
 
   private checkInBound(xValue: number): boolean {
+    console.log('checkInBound', xValue, this.bound);
     return xValue > this.bound.left && xValue < this.bound.right;
   }
 
