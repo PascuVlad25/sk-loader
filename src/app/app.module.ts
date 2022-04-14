@@ -15,6 +15,8 @@ import { ExamplesComponent } from './components/examples/examples.component';
 import { ComparatorComponent } from './components/comparator/comparator.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DocumentationComponent } from './components/documentation/documentation.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RedirectProxy } from './redirect-proxy.guard';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,10 @@ import { DocumentationComponent } from './components/documentation/documentation
   ],
   imports: [
     BrowserModule,
-    SkLoaderModule
+    SkLoaderModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [RedirectProxy],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
