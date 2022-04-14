@@ -10,7 +10,7 @@ export class RedirectProxy implements CanActivate {
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
         let path = localStorage.getItem('urlPath');
         if (path) {
-          localStorage.removeItem('path');
+          localStorage.removeItem('urlPath');
           this.router.navigate([path]);
           return false;
         }
