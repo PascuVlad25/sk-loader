@@ -7,7 +7,6 @@ import { RedirectProxy } from './redirect-proxy.guard';
 const routes: Routes = [
   {
     path: '',
-    canActivate: [RedirectProxy],
     component: PresentationComponent
   },
   {
