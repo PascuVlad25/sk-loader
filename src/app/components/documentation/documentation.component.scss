@@ -1,7 +1,10 @@
 
 
 .documentation-section {
-    padding-bottom: 25vh;
+    margin-top: calc(70px + 10vh);
+    padding: 0 0 25vh 0;
+    font-family: var(--font-family);
+    background-color: var(--white-background-color);
 
     .documentation-header-container {
         margin: 2em 0 1em 0;

@@ -1,13 +1,31 @@
 <section id="examples" class="container examples-section">
     <div class="content examples-content">
         <h2 class="title examples-title">Examples</h2>
+        <div class="warning-container">
+            <div>
+                <div class="warning-header">Attention! This page is fully loaded!</div>
+                <div class="warning-message">
+                    Don't be fooled by the loading content. This examples have the main purpose of displaying the loader components.
+                </div>
+            </div> 
+        </div>
         <p class="examples-subtitle">This is a demo of the final result of how your skeleton 
             loader component may look like. In this example is presented a header (h1), 
             a card containing an image, a small header (h3) and a paragraph and at the end an indented paragraph.
         </p>
+        <h3 class="example-header">Header</h3>
         <div class="header-container">
             <sk-loader [rowsNumber]="2"></sk-loader>
         </div>
+        <h3 class="example-header">Paragraph</h3>
+        <div class="paragraph-container">
+            <sk-loader [rowsNumber]="8" [indent]="true"></sk-loader>
+        </div>
+        <h3 class="example-header">Image</h3>
+        <div class="image-container">
+            <sk-loader loaderType="image"></sk-loader>
+        </div>
+        <h3 class="example-header">Cards</h3>
         <div class="card-container">
             <div *ngFor="let card of cards" class="card">
                 <div class="image">
@@ -18,9 +36,10 @@
                 </div>
                 <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
             </div>
-        </div>
-        <div class="paragraph-container">
-            <sk-loader [rowsNumber]="5" [indent]="true"></sk-loader>
+        </div>        
+        <h3 class="example-header">Masonry Layout</h3>
+        <div class="collage-container">
+            <sk-loader *ngFor="let image of masonryImages" loaderType="image"></sk-loader>
         </div>
     </div>
 </section>

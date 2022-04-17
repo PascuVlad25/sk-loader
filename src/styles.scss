@@ -20,11 +20,14 @@ body {
     --secondary-color-lighter: #625ded;
     --secondary-color-shade: #433eb2;
     --navbar-background-color: var(--secondary-color);
-    --hero-background-color: white;
+    --white-background-color: white;
     --gray-background-color: #f3f3f3;
     --text-color: white;
     --text-color-black: #191919;
     --text-hover-color: rgb(246, 246, 246);
+
+    --warning-color: #d6692e;
+    --warning-background: #ffeabf;
 
     // font
     --font-family: 'Roboto', sans-serif;
@@ -54,7 +57,7 @@ body {
 
         .title {
             font-size: 3em;
-            margin: 0;
+            margin: 0 0 16px 0;
         }
     }
 }
@@ -76,6 +79,16 @@ body {
         font-size: 32px;
         font-weight: 700;
         line-height: 45px;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        height: 250px;
+
+        & > * {
+            width: 80%;
+        }
     }
 
     .card-container {
@@ -119,5 +132,33 @@ body {
     .paragraph-container {
         padding-left: 30px;
         text-indent: 40px;
+    }
+}
+
+.warning-container {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background-color: var(--warning-background);
+    border-radius: 10px;
+
+    .warning-header {
+        color: var(--warning-color);
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .warning-message {
+        font-size: 12px;
+    }
+
+    &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        flex: 0 0 auto;
+        margin-right: 1em;
+        background-image: url('/assets/icons/triangle-exclamation-solid.svg');
+        background-size: contain;
     }
 }
