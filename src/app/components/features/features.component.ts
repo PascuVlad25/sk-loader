@@ -13,13 +13,13 @@ export class FeaturesComponent implements OnInit {
       icon: 'assets/icons/wand-magic-sparkles-solid.svg'
     },
     {
-      title: 'Highly customizable',
+      title: 'Customizable',
       description: 'You can change the parameters of the component so that the loader fits perfectly with your final loaded content. There are endless variations to try out.',
       icon: 'assets/icons/sliders-solid.svg'
     },
     {
       title: 'Easy to use',
-      description: 'Vast and explicit documentation with a lot of examples to understand how this component works and how you can use it at its best. Then just npm install and you are ready to go.',
+      description: 'Detailed documentation with lots of examples to understand how this component works and how you can use it at its best. Just npm install and you are ready to go.',
       icon: 'assets/icons/face-smile-beam-solid.svg'
     },
     {
