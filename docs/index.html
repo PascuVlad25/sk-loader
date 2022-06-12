@@ -1,12 +1,75 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <title>sk-loader | npm package</title>
-  <base href="https://vladpascu.com/sk-loader/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>@import"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";html{scroll-behavior:smooth}body{margin:0;--primary-color:#f37d3e;--primary-color-tint:#f98c51;--primary-color-shade:#d6692e;--secondary-color:#4641e0;--secondary-color-tint:#5752ee;--secondary-color-lighter:#625ded;--secondary-color-shade:#433eb2;--navbar-background-color:var(--secondary-color);--white-background-color:white;--gray-background-color:#f3f3f3;--text-color:white;--text-color-black:#191919;--text-hover-color:rgb(246, 246, 246);--warning-color:#d6692e;--warning-background:#ffeabf;--font-family:"Roboto", sans-serif}@media only screen and (max-width: 768px){body{--content-max-width:90vw}}@media only screen and (min-width: 768px){body{--content-max-width:80vw}}@media only screen and (min-width: 1200px){body{--content-max-width:70vw}}</style><link rel="stylesheet" href="styles.8e982659e88a1cad.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.8e982659e88a1cad.css"></noscript></head>
-<body>
-  <app-root></app-root>
-<script src="runtime.3abca6f43c4d49de.js" type="module"></script><script src="polyfills.b4121c2fa314d58b.js" type="module"></script><script src="main.6c794e1bd64f3e76.js" type="module"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sk-loader | Docs</title>
 
-</body></html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sk-loader/dist/sk-loader-web-components/sk-loader-web-components.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script type="module">
+        import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/sk-loader/loader/index.es2017.js';
+        defineCustomElements();
+    </script>
+</head>
+<body>    
+    <nav>
+        <div class="navbar-content">
+            <a href="../#home" class="logo"><h2>sk-loader</h2></a>
+            <span class="nav-buttons-container">
+                <a href="../#installation" class="nav-button">Installation</a>
+                <a href="../#examples" class="nav-button">Examples</a>
+                <a href="./" class="nav-button">Documentation</a>
+            </span>
+        </div>        
+    </nav>
+    
+    <section id="documentation" class="container documentation-section">
+        <div class="content documentation-content">
+            <h2 class="title documentation-title">Documentation</h2>
+            <p class="documentation-subtitle">Coming soon...</p>
+    
+            <div class="documentation-header-container">
+                <sk-loader-paragraph rows="2" indent></sk-loader-paragraph>
+            </div>
+    
+            <div class="paragraph-container">
+                <sk-loader-paragraph rows="4" indent></sk-loader-paragraph>
+                <sk-loader-paragraph rows="6" indent></sk-loader-paragraph>
+                <sk-loader-paragraph rows="5" indent></sk-loader-paragraph>
+            </div>
+            
+            <div class="documentation-header-container">
+                <sk-loader-paragraph rows="2" indent></sk-loader-paragraph>
+            </div>
+            
+            <div class="paragraph-container">
+                <sk-loader-paragraph rows="6" indent></sk-loader-paragraph>
+                <sk-loader-paragraph rows="3" indent></sk-loader-paragraph>
+            </div>
+            
+            <div class="documentation-image-container">
+                <sk-loader-image></sk-loader-image>
+            </div>
+            
+            <div class="paragraph-container">
+                <sk-loader-paragraph rows="3" indent></sk-loader-paragraph>
+                <sk-loader-paragraph rows="7" indent></sk-loader-paragraph>
+                <sk-loader-paragraph rows="4" indent></sk-loader-paragraph>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://vladpascu.com" target="_blank" class="creator-container">
+            <img src="../assets/img/creator.png" width="40" height="40" class="creator-image">
+            <div>
+                <div class="creator-text">Created by</div>
+                <div class="creator-name">Vlad Pascu</div>
+            </div>
+        </a>
+    </footer>
+</body>
+</html>

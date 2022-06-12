@@ -1,0 +1,50 @@
+#examples.examples-section {
+    .example-header {
+        margin-top: 3em;
+    }
+    
+    .card-container {
+        .card:not(:nth-of-type(1)) {
+            display: none;
+        }
+    }
+    
+    .collage-container {
+        columns: 4 200px;
+        column-gap: 10px;
+        padding: 0 30px;
+    
+        .image {
+            display: inline-block;
+            width: 100%;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    
+        @for $i from 1 through 15 { 
+            .image:nth-child(#{$i}) {
+              $h: (random(300) + 100) + px;
+              height: $h;
+              margin-bottom: 1em;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .card-container {
+            .card:nth-of-type(2) {
+                display: block;
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1300px) {
+        .card-container {
+            .card:nth-of-type(3) {
+                display: block;
+            }
+        }
+    }
+}
+
