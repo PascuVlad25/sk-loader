@@ -1,4 +1,4 @@
-# sk-loader
+# [sk-loader](https://vladpascu.com/sk-loader)
 Highly customizable skeleton loader web components for any application.
 
 ## What is this?
