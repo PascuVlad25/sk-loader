@@ -8,6 +8,7 @@ nav {
     left: 0;
     box-sizing: border-box;
     background-color: var(--navbar-background-color);
+    border-bottom: 1px solid var(--secondary-color-shade);
     
     .navbar-content {
         height: 100%;

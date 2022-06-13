@@ -21,7 +21,7 @@ html {
       --secondary-color-shade: #433eb2;
       --navbar-background-color: var(--secondary-color);
       --white-background-color: white;
-      --gray-background-color: #f6f6f6;
+      --gray-background-color: #f8f8f8;
       --tag-secondary-background-color: #f6f8fc;
 
       --text-color: white;
@@ -168,4 +168,12 @@ html {
           background-image: url('assets/icons/triangle-exclamation-solid.svg');
           background-size: contain;
       }
+  }
+  
+  .paragraph-hyperlink {
+    color: var(--primary-color);
+  }
+
+  .anchor-scroll {
+    scroll-margin-top: 10vh;
   }

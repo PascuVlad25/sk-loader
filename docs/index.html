@@ -6,296 +6,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sk-loader | Docs</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.0/dist/sk-loader/sk-loader.css">
+    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.1/dist/sk-loader/sk-loader.css">
+    <link href="https://www.unpkg.com/prismjs@v1.28.0/themes/prism.css" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
 
     <script type="module">
-        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.0/loader/index.es2017.js';
+        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.1/loader/index.es2017.js';
         defineCustomElements();
     </script>
 </head>
-<body>    
+<body>
     <nav>
         <div class="navbar-content">
             <a href="./" class="logo"><h2>sk-loader docs</h2></a>
             <span class="nav-buttons-container">
-                <a href="../#home" class="nav-button">Home</a>
-                <a href="../#examples" class="nav-button">Examples</a>
-                <a href="./" class="nav-button">Docs</a>
+                <a href="../" class="nav-button">Home</a>
+                <a href="./" class="nav-button">Guide</a>
+                <a href="components" class="nav-button">Components</a>
             </span>
         </div>        
     </nav>
     
     <div id="documentation" class="container documentation-section">
         <div class="content documentation-content">
-            <h1 class="title documentation-main-title">Components</h1>
-            <p class="version-text">sk-loader &#149; version 2.1.0</p>
+            <h1 class="title documentation-main-title">Getting Started</h1>
+            <p class="version-text">sk-loader &#149; version 2.1.1</p>
 
-            <section id="sk-loader-text" class="documentation-section">
+            <section id="installation" class="documentation-section">
 
                 <h2 class="section-title">
-                    <a href="#sk-loader-text" class="section-anchor" aria-hidden="true">#</a>
-                    sk-loader-text
+                    <a href="#installation" class="section-anchor" aria-hidden="true">#</a>
+                    Installation
                 </h2>
                 <div class="section-content">
                     <div class="section-paragraph">
                         <p>
-                            This component is the placeholder for any type of text that is loaded dynamically from the server. 
-                            It works for paragraph text by replacing a <code class="code-tag">&#60;p&#62;</code> element, but also for headings by 
-                            replacing <code class="code-tag">&#60;h1&#62;</code> to <code class="code-tag">&#60;h6&#62;</code> elements.
-                        </p>
-                        <p><code class="code-tag">sk-loader-text</code> is highly adaptable. It inherits the font size of the parent element and uses it to compute its height.
-                            This is done in order to mimic the final loaded text size as close as possible. It behaves like a block element, so it expands the full width of the parent.
-                            Also if it has more rows, the last row will be shorter in width to replicate realistic text length for the last line of text. 
-                            And to be more realistic, each row has a dynamically computed width. So on each reload, it will generate a different skeleton shape for the unloaded text.
+                            This step applies only to project managed with <code class="code-tag">npm</code>. 
+                            If you have a plain/vanilla JavaScript project or a static website not managed by <code class="code-tag">npm (node package manager)</code> skip to the next step at 
+                            <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a> section.
                         </p>
                         <p>
-                            This component is also highly customizable by having a lot of properties and css variables made just for changing the final appearance of the loader.
+                            Copy the installation command below, paste it in your terminal, run it and let the magic begins. Make sure to be in the root folder of your project.
                         </p>
-                    </div>
-        
-                    <h2>Example</h2>
-                    <div class="sub-section-content">
-                        <sk-loader-text rows="6" indent></sk-loader-text>
-                    </div>
-        
-                    <h2>Properties</h2>
-                    <div class="sub-section-content">
-                        <h3>rows</h3>
-                        <div class="documentation-property-container">
-                            <table class="documentation-table">
-                                <tr>
-                                    <th class="fixed-column">Description</th>
-                                    <td class="expanded-column">The number of rows (skeleton-bars).</td>
-                                </tr>
-                                <tr>
-                                    <th>Attribute</th>
-                                    <td><code class="code-tag">rows</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Type</th>
-                                    <td><code class="code-tag">number</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Default</th>
-                                    <td><code class="code-tag">1</code></td>
-                                </tr> 
-                            </table>
-
-                            <div class="documentation-example">
-                                <h4>default</h4>
-                                <sk-loader-text></sk-loader-text>
-                                <h4>rows="3"</h4>
-                                <sk-loader-text rows="3"></sk-loader-text>
-                            </div>
-                        </div>
-
-                        <h3>align</h3>
-                        <div class="documentation-property-container">
-                            <table class="documentation-table">
-                                <tr>
-                                    <th class="fixed-column">Description</th>
-                                    <td class="expanded-column">The alignment of the bars relative to parent.</td>
-                                </tr>
-                                <tr>
-                                    <th>Attribute</th>
-                                    <td><code class="code-tag">align</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Type</th>
-                                    <td><code class="code-tag">'left' | 'center' | 'right'</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Default</th>
-                                    <td><code class="code-tag">'left'</code></td>
-                                </tr> 
-                            </table>
-
-                            <div class="documentation-example">
-                                <h4>default</h4>
-                                <sk-loader-text rows="2"></sk-loader-text>
-                                <h4>align="center"</h4>
-                                <sk-loader-text rows="2" align="center"></sk-loader-text>
-                                <h4>align="right"</h4>
-                                <sk-loader-text rows="2" align="right"></sk-loader-text>
-                            </div>
-                        </div>
-
-                        <h3>indent</h3>
-                        <div class="documentation-property-container">
-                            <table class="documentation-table">
-                                <tr>
-                                    <th class="fixed-column">Description</th>
-                                    <td class="expanded-column">If <code class="code-tag">true</code>, the first row will have identation space on the left for 
-                                        <code class="code-tag">align="left"</code> and on the right for <code class="code-tag">align="right"</code>.
-                                        For <code class="code-tag">align="center"</code> identation is not applicable.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Attribute</th>
-                                    <td><code class="code-tag">indent</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Type</th>
-                                    <td><code class="code-tag">boolean</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Default</th>
-                                    <td><code class="code-tag">false</code></td>
-                                </tr> 
-                            </table>
-
-                            <div class="documentation-example">
-                                <h4>default</h4>
-                                <sk-loader-text rows="3"></sk-loader-text>
-                                <h4>indent="true"</h4>
-                                <sk-loader-text rows="3" indent="true"></sk-loader-text>
-                            </div>
-                        </div>
-
-                        <h3>animated</h3>
-                        <div class="documentation-property-container">
-                            <table class="documentation-table">
-                                <tr>
-                                    <th class="fixed-column">Description</th>
-                                    <td class="expanded-column">If <code class="code-tag">true</code>, the bar is animated with a wave effect.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Attribute</th>
-                                    <td><code class="code-tag">animated</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Type</th>
-                                    <td><code class="code-tag">boolean</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Default</th>
-                                    <td><code class="code-tag">true</code></td>
-                                </tr> 
-                            </table>
-
-                            <div class="documentation-example">
-                                <h4>default</h4>
-                                <sk-loader-text rows="2"></sk-loader-text>
-                                <h4>animated="false"</h4>
-                                <sk-loader-text rows="2" animated="false"></sk-loader-text>
-                            </div>
+                        <div class="code-container">
+                            <code>$ npm install sk-loader</code>
+                            <span id="installation-copy-button" onclick="copyCommand()" class="copy-button">Copy</span>
                         </div>
                     </div>
-        
-                    <h2>CSS Custom Variables</h2>
-                    <table class="sub-section-content documentation-table">
-                        <tr>
-                            <th class="fixed-column">CSS Variable</th>
-                            <th class="expanded-column">Description</th>
-                        </tr>
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-background</code></td>
-                            <td>The background color of the skeleton bars</td>
-                        </tr>
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-highlight</code></td>
-                            <td>The color of the moving highlight for the wave effect</td>
-                        </tr>
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-animation-time</code></td>
-                            <td>The time of the animation for the wave effect</td>
-                        </tr> 
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-border-radius</code></td>
-                            <td>The border radius of the skeleton bars</td>
-                        </tr>
-                    </table>
                 </div> 
 
             </section>
             
-            <section id="sk-loader-image" class="documentation-section">
+            <section id="setup" class="documentation-section">
 
                 <h2 class="section-title">
-                    <a href="#sk-loader-image" class="section-anchor" aria-hidden="true">#</a>
-                    sk-loader-image
+                    <a href="#setup" class="section-anchor" aria-hidden="true">#</a>
+                    Package Setup
                 </h2>
                 <div class="section-content">
 
                     <div class="section-paragraph">
                         <p>
-                            This component is the placeholder for an image that is loaded dynamically from the server. 
-                            It works for any size of image by replacing an <code class="code-tag">&#60;img&#62;</code> element.
-                        </p>
-                        <p><code class="code-tag">sk-loader-image</code> is highly adaptable. It inherits the size of the parent element and expands to its full height and full width.
-                            This is done in order to mimic the final loaded image size as close as possible. You can overwrite this behaviour by adding 
-                            specific style on this element for defining the desired width and height.
-                        </p>
-                        <p>
-                            This component is also highly customizable by having properties and css variables made just for changing the final appearance of the loader.
+                            The setup depends on the project's framework. Below are presented the setup instructions for <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a>, 
+                            <a href="#angular" class="paragraph-hyperlink">Angular</a> and <a href="#react" class="paragraph-hyperlink">React</a>. The <code class="code-tag">sk-loader</code> package is a collection of web components so it 
+                            works with any type of framework. If you don't find your project's framework in the list, use the <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a> approach.
+                            More setup instructions for diffrent frameworks are yet to be added.
                         </p>
                     </div>
         
-                    <h2>Example</h2>
-                    <div class="sub-section-content image-container">
-                        <sk-loader-image></sk-loader-image>
-                    </div>
-        
-                    <h2>Properties</h2>
-                    <div class="sub-section-content">
-                        <h3>animated</h3>
-                        
-                        <div class="documentation-property-container">
-                            <table class="documentation-table">
-                                <tr>
-                                    <th class="fixed-column">Description</th>
-                                    <td class="expanded-column">If <code class="code-tag">true</code>, the bar is animated with a wave effect.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Attribute</th>
-                                    <td><code class="code-tag">animated</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Type</th>
-                                    <td><code class="code-tag">boolean</code></td>
-                                </tr>
-                                <tr>
-                                    <th>Default</th>
-                                    <td><code class="code-tag">true</code></td>
-                                </tr> 
-                            </table>
+                    <div id="javascript" class="sub-section-container anchor-scroll">
+                        <h2 class="section-title">
+                            <a href="#javascript" class="section-anchor" aria-hidden="true">#</a>
+                            Javascript - plain website/app
+                        </h2>
 
-                            <div class="documentation-example">
-                                <h4>default</h4>
-                                <sk-loader-image style="height: 100px;"></sk-loader-image>
-                                <h4>animated="false"</h4>
-                                <sk-loader-image animated="false" style="height: 100px;"></sk-loader-image>
-                            </div>
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">index.html</p>
+                            <pre class="code-snippet">
+                                <code class="language-html">
+&#60;head&#62;
+    ...
+    &#60;link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.1/dist/sk-loader/sk-loader.css"&#62;
+    &#60;script type="module"&#62;
+        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.1/loader/index.es2017.js';
+        defineCustomElements();
+    &#60;/script&#62;
+&#60;/head&#62;
+&#60;body&#62;
+    ...
+    &#60;sk-loader-image&#62;&#60;/sk-loader-image&#62;
+    &#60;sk-loader-text rows="5" indent&#62;&#60;/sk-loader-text&#62;
+    ...
+&#60;/body&#62;
+                                </code>
+                            </pre>
                         </div>
                     </div>
-        
-                    <h2>CSS Custom Variables</h2>
-                    <table class="sub-section-content documentation-table">
-                        <tr>
-                            <th class="fixed-column">CSS Variable</th>
-                            <th class="expanded-column">Description</th>
-                        </tr>
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-background</code></td>
-                            <td>The background color of the skeleton bars</td>
-                        </tr>
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-highlight</code></td>
-                            <td>The color of the moving highlight for the wave effect</td>
-                        </tr>
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-animation-time</code></td>
-                            <td>The time of the animation for the wave effect</td>
-                        </tr> 
-                        <tr>
-                            <td class="fixed-column"><code class="code-tag">--sk-loader-border-radius</code></td>
-                            <td>The border radius of the skeleton bars</td>
-                        </tr>
-                    </table>
+                    
+                    <div id="angular" class="sub-section-container anchor-scroll">
+                        <h2 class="section-title">
+                            <a href="#angular" class="section-anchor" aria-hidden="true">#</a>
+                            Angular app
+                        </h2>
 
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">app.module.ts</p>
+                            <pre class="code-snippet">
+                                <code class="language-ts">
+@NgModule({
+    ...
+    // Add CUSTOM_ELEMENTS_SCHEMA to schemas
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+export class AppModule {}
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">main.ts</p>
+                            <pre class="code-snippet">
+                                <code class="language-ts">
+// other imports
+...
+import { defineCustomElements } from 'sk-loader/loader';
+
+// other logic
+...
+defineCustomElements(window);
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">angular.json</p>
+                            <pre class="code-snippet">
+                                <code class="language-json">
+{
+    "build": {
+        "styles": [
+            "src/styles.scss",
+            "./node_modules/sk-loader/dist/sk-loader/sk-loader.css"
+        ],
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">new-component.component.html</p>
+                            <pre class="code-snippet">
+                                <code class="language-html">
+&#60;div class="container"&#62;
+    &#60;!-- Use it before the content loads --&#62;
+    &#60;sk-loader-text *ngIf="isLoading" rows="2" indent&#62;&#60;sk-loader-text&#62;
+    &#60;p *ngIf="!isLoading" class="text-indent"&#62;
+        {{ 'This dynamic text comes from the server' }}
+    &#60;/p&#62;
+&#60;/div&#62;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    
+                    <div id="react" class="sub-section-container anchor-scroll">
+                        <h2 class="section-title">
+                            <a href="#react" class="section-anchor" aria-hidden="true">#</a>
+                            React app
+                        </h2>
+
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">index.js</p>
+                            <pre class="code-snippet">
+                                <code class="language-js">
+// other imports
+...
+import 'sk-loader/dist/sk-loader/sk-loader.css';
+import { defineCustomElements } from 'sk-loader/loader';
+
+// other logic
+...
+defineCustomElements();
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="code-snippet-container">
+                            <p class="code-snippet-file-name">new-component.tsx</p>
+                            <pre class="code-snippet">
+                                <code class="language-tsx">
+function NewComponent() {
+    return (
+        &#60;div className="container"&#62;
+            { isLoading ? 
+                &#60;sk-loader-text rows="2" indent&#62;&#60;sk-loader-text&#62;:
+                &#60;p className="text-indent"&#62;
+                    { 'This dynamic text comes from the server' }
+                &#60;/p&#62;
+            }        
+        &#60;/div&#62;
+    );
+}
+                                </code>
+                            </pre>
+                        </div>                   
+                    </div>
                 </div>
 
             </section>    
@@ -311,5 +227,9 @@
             </div>
         </a>
     </footer>
+    
+    <script src="../js/code-copy.js"></script>
+    <script src="https://www.unpkg.com/prismjs@v1.28.0/components/prism-core.min.js"></script>
+	<script src="https://www.unpkg.com/prismjs@v1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>

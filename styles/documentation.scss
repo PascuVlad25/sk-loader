@@ -41,11 +41,15 @@
 
             .section-paragraph {
                 color: var(--text-color-gray);
-                line-height: 1.5em;
+                line-height: 1.6em;
             }
 
             .section-paragraph, .sub-section-content {
                 margin-bottom: 3em;
+            }
+
+            .sub-section-container {
+                margin-top: 6em;
             }
 
             .documentation-property-container {
@@ -93,6 +97,26 @@
         }
     }
 
+    .code-snippet-container {
+        margin-bottom: 2em;
+
+        .code-snippet-file-name {
+            display: inline-block;
+            padding: 0.5em 1.5em;
+            margin: 0;
+            background-color: var(--gray-background-color);
+            border-radius: 10px 10px 0 0 ;
+        }
+
+        .code-snippet {
+            display: flex;
+            padding: 0 2em;
+            margin: 0;
+            border-radius: 0 10px 10px 10px;
+            background-color: var(--gray-background-color);
+        }
+    }
+
     .documentation-table {
         width: 100%;
         border-radius: 10px;
@@ -109,7 +133,7 @@
         }
 
         th {
-            background-color: var(--secondary-color);
+            background-color: var(--secondary-color-tint);
             border-color: var(--secondary-color-shade);
             color: white;
         }

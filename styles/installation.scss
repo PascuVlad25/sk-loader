@@ -1,7 +1,24 @@
 #installation .code-container {
-    padding: 30px;
-    background-color: var(--secondary-color-shade);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background-color: var(--secondary-color-tint);
     color: white;
     border-radius: 10px;
-    font-size: 1.2em;
+
+    code {
+        font-size: 1.2em;
+    }
+
+    .copy-button {
+        padding: 0.4em 1.5em;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {            
+            background-color: var(--secondary-color-shade);
+        }
+    }
 }

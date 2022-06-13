@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sk-loader | npm package</title>
     
-    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.0/dist/sk-loader/sk-loader.css">
+    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.1/dist/sk-loader/sk-loader.css">
     <link rel="stylesheet" href="styles.css">
 
     <script type="module">
-        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.0/loader/index.es2017.js';
+        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.1/loader/index.es2017.js';
         defineCustomElements();
     </script>
 </head>
@@ -38,8 +38,8 @@
                             That can impact your viewers or clients. So let's change that!
                         </p>
                         <div class="buttons-container">
-                            <a href="#installation" class="button primary">Get started</a>
-                            <a href="docs" class="button secondary">Documentation</a>
+                            <a href="docs" class="button primary">Get started</a>
+                            <a href="docs/components" class="button secondary">Components Docs</a>
                             <a href="https://www.npmjs.com/package/sk-loader" target="_blank" rel="noopener noreferrer external" class="button npm-button">
                                     Check it out on <img src="assets/icons/npm-brands.svg" width="40">
                             </a>
@@ -128,10 +128,14 @@
             <section id="installation" class="container installation-section">
                 <div class="content installation-content">
                     <h2 class="title installation-title">Installation</h2>
-                    <p class="installation-subtitle">Just copy the command below, paste it in your terminal (make sure to be in the root folder of project), run it and let the magic begins.</p>
+                    <p class="installation-subtitle">
+                        Just copy the command below, paste it in your terminal (make sure to be in the root folder of your project), run it and let the magic begins.
+                    </p>
                     <div class="code-container">
                         <code>$ npm install sk-loader</code>
+                        <span id="installation-copy-button" onclick="copyCommand()" class="copy-button">Copy</span>
                     </div>
+                    <p>You can find more information about setting up the package on the <a href="docs" class="paragraph-hyperlink">Getting Started</a> page.</p>
                 </div>
             </section>
             
@@ -223,6 +227,7 @@
         </a>
     </footer>
 
+    <script src="js/code-copy.js"></script>
     <script src="js/comparator.js"></script>
 </body>
 </html>
