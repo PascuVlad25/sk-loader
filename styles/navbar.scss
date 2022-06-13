@@ -31,9 +31,8 @@ nav {
         }
 
         .nav-buttons-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            display: flex;
+            gap: 1em;
 
             .nav-button {
                 height: 50px;
@@ -41,7 +40,7 @@ nav {
                 line-height: 50px;
                 text-decoration: none;
                 color: var(--text-color);
-                padding: 0 10px;
+                padding: 0 1.5em;
                 border-radius: 6px;
 
                 &:hover {

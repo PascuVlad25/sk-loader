@@ -20,15 +20,16 @@ index.html
 ```html 
 <head>
     ...
+    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.0/dist/sk-loader/sk-loader.css">
     <script type="module">
-        import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/sk-loader/loader/index.es2017.js';
+        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.0/loader/index.es2017.js';
         defineCustomElements();
     </script>
 </head>
 <body>
     ...
     <sk-loader-image></sk-loader-image>
-    <sk-loader-paragraph rows="5" indent></sk-loader-paragraph>
+    <sk-loader-text rows="5" indent></sk-loader-text>
     ...
 </body>
 ```
@@ -68,7 +69,7 @@ new-component.component.html
 ```html
 <div class="container">
     <!-- Use it before the content loads -->
-    <sk-loader-paragraph *ngIf="isLoading" rows="2" indent><sk-loader-paragraph>
+    <sk-loader-text *ngIf="isLoading" rows="2" indent><sk-loader-text>
     <p *ngIf="!isLoading"
         class="text-indent">
         {{ 'This dynamic text comes from the server' }}
@@ -95,7 +96,7 @@ function NewComponent() {
   return (
     <div className="container">
         { isLoading ? 
-            <sk-loader-paragraph rows="2" indent><sk-loader-paragraph>:
+            <sk-loader-text rows="2" indent><sk-loader-text>:
             <p className="text-indent">
                 { 'This dynamic text comes from the server' }
             </p>
@@ -104,7 +105,10 @@ function NewComponent() {
   );
 }
 ```
+## Docs
 
-## Demo
+More details about the components on [sk-loader docs](https://vladpascu.com/sk-loader/docs) page!
 
-Check out the demo page [here](https://vladpascu.com/sk-loader/)!
+## Main page
+
+Check out the main page of the package [here](https://vladpascu.com/sk-loader/)!

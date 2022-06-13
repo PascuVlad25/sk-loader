@@ -14,12 +14,16 @@ body {
   --secondary-color-shade: #433eb2;
   --navbar-background-color: var(--secondary-color);
   --white-background-color: white;
-  --gray-background-color: #f3f3f3;
+  --gray-background-color: #f6f6f6;
+  --tag-secondary-background-color: #f6f8fc;
   --text-color: white;
   --text-color-black: #191919;
+  --text-color-gray: #505050;
   --text-hover-color: rgb(246, 246, 246);
+  --table-border-color: #d3d3d3;
   --warning-color: #d6692e;
   --warning-background: #ffecc7;
+  --box-shadow: rgb(76 76 80 / 10%) 0px 30px 70px -10px, rgb(0 0 0 / 20%) 0px 20px 40px -30px;
   --font-family: 'Roboto', sans-serif; }
   body a {
     text-decoration: none; }
@@ -144,16 +148,15 @@ nav {
       nav .navbar-content .logo:hover {
         text-decoration: underline; }
     nav .navbar-content .nav-buttons-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px; }
+      display: flex;
+      gap: 1em; }
       nav .navbar-content .nav-buttons-container .nav-button {
         height: 50px;
         text-align: center;
         line-height: 50px;
         text-decoration: none;
         color: var(--text-color);
-        padding: 0 10px;
+        padding: 0 1.5em;
         border-radius: 6px; }
         nav .navbar-content .nav-buttons-container .nav-button:hover {
           background-color: var(--secondary-color-tint); }
@@ -413,49 +416,49 @@ nav {
     page-break-inside: avoid;
     break-inside: avoid; }
   #examples.examples-section .collage-container .image:nth-child(1) {
-    height: 137px;
+    height: 311px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(2) {
-    height: 390px;
+    height: 374px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(3) {
-    height: 388px;
-    margin-bottom: 1em; }
-  #examples.examples-section .collage-container .image:nth-child(4) {
-    height: 243px;
-    margin-bottom: 1em; }
-  #examples.examples-section .collage-container .image:nth-child(5) {
-    height: 384px;
-    margin-bottom: 1em; }
-  #examples.examples-section .collage-container .image:nth-child(6) {
-    height: 197px;
-    margin-bottom: 1em; }
-  #examples.examples-section .collage-container .image:nth-child(7) {
     height: 118px;
     margin-bottom: 1em; }
+  #examples.examples-section .collage-container .image:nth-child(4) {
+    height: 220px;
+    margin-bottom: 1em; }
+  #examples.examples-section .collage-container .image:nth-child(5) {
+    height: 321px;
+    margin-bottom: 1em; }
+  #examples.examples-section .collage-container .image:nth-child(6) {
+    height: 367px;
+    margin-bottom: 1em; }
+  #examples.examples-section .collage-container .image:nth-child(7) {
+    height: 123px;
+    margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(8) {
-    height: 260px;
+    height: 166px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(9) {
-    height: 343px;
+    height: 104px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(10) {
-    height: 279px;
+    height: 115px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(11) {
-    height: 164px;
+    height: 306px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(12) {
-    height: 112px;
+    height: 229px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(13) {
-    height: 288px;
+    height: 383px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(14) {
-    height: 313px;
+    height: 384px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(15) {
-    height: 120px;
+    height: 215px;
     margin-bottom: 1em; }
 
 @media only screen and (min-width: 768px) {
@@ -480,12 +483,16 @@ body {
   --secondary-color-shade: #433eb2;
   --navbar-background-color: var(--secondary-color);
   --white-background-color: white;
-  --gray-background-color: #f3f3f3;
+  --gray-background-color: #f6f6f6;
+  --tag-secondary-background-color: #f6f8fc;
   --text-color: white;
   --text-color-black: #191919;
+  --text-color-gray: #505050;
   --text-hover-color: rgb(246, 246, 246);
+  --table-border-color: #d3d3d3;
   --warning-color: #d6692e;
   --warning-background: #ffecc7;
+  --box-shadow: rgb(76 76 80 / 10%) 0px 30px 70px -10px, rgb(0 0 0 / 20%) 0px 20px 40px -30px;
   --font-family: 'Roboto', sans-serif; }
   body a {
     text-decoration: none; }
@@ -610,16 +617,15 @@ nav {
       nav .navbar-content .logo:hover {
         text-decoration: underline; }
     nav .navbar-content .nav-buttons-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px; }
+      display: flex;
+      gap: 1em; }
       nav .navbar-content .nav-buttons-container .nav-button {
         height: 50px;
         text-align: center;
         line-height: 50px;
         text-decoration: none;
         color: var(--text-color);
-        padding: 0 10px;
+        padding: 0 1.5em;
         border-radius: 6px; }
         nav .navbar-content .nav-buttons-container .nav-button:hover {
           background-color: var(--secondary-color-tint); }
@@ -657,29 +663,90 @@ footer {
     footer .creator-container .creator-name {
       font-weight: 600; }
 
-.documentation-section {
+#documentation.documentation-section {
   margin-top: calc(70px + 10vh);
   padding: 0 0 25vh 0;
   font-family: var(--font-family);
+  color: var(--text-color-black);
   background-color: var(--white-background-color); }
-  .documentation-section .documentation-header-container {
-    margin: 2em 0 1em 0;
-    font-size: 28px; }
-  .documentation-section .paragraph-container {
-    margin-bottom: 2em 0; }
-  .documentation-section .documentation-image-container {
-    display: flex;
-    justify-content: center;
-    margin: 2em 0; }
-    .documentation-section .documentation-image-container > * {
-      height: 250px;
+  #documentation.documentation-section .version-text {
+    color: var(--text-color-gray); }
+  #documentation.documentation-section .documentation-section {
+    padding-top: 10vh; }
+    #documentation.documentation-section .documentation-section .section-title {
+      position: relative;
+      transition: padding-left 0.3s ease-in-out; }
+      #documentation.documentation-section .documentation-section .section-title .section-anchor {
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out; }
+      #documentation.documentation-section .documentation-section .section-title:hover {
+        padding-left: 1em; }
+        #documentation.documentation-section .documentation-section .section-title:hover .section-anchor {
+          opacity: 1; }
+    #documentation.documentation-section .documentation-section .section-content .section-paragraph {
+      color: var(--text-color-gray);
+      line-height: 1.5em; }
+    #documentation.documentation-section .documentation-section .section-content .section-paragraph, #documentation.documentation-section .documentation-section .section-content .sub-section-content {
+      margin-bottom: 3em; }
+    #documentation.documentation-section .documentation-section .section-content .documentation-property-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 2em;
+      margin-bottom: 4em; }
+      #documentation.documentation-section .documentation-section .section-content .documentation-property-container .documentation-example {
+        width: 75%;
+        padding: 1.5em;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: var(--gray-background-color); }
+        #documentation.documentation-section .documentation-section .section-content .documentation-property-container .documentation-example h4 {
+          margin: 1em 0 0 0; }
+          #documentation.documentation-section .documentation-section .section-content .documentation-property-container .documentation-example h4:first-of-type {
+            margin: 0; }
+    #documentation.documentation-section .documentation-section .image-container {
+      display: flex;
+      justify-content: center;
+      margin: 2em 0; }
+      #documentation.documentation-section .documentation-section .image-container > * {
+        height: 250px; }
+  #documentation.documentation-section .code-tag {
+    padding: 2px 6px;
+    border-radius: 5px;
+    background-color: var(--tag-secondary-background-color); }
+    #documentation.documentation-section .code-tag:hover {
+      color: var(--secondary-color); }
+  #documentation.documentation-section .documentation-table {
+    width: 100%;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border-style: hidden;
+    box-shadow: inset 0 0 0 1px var(--table-border-color);
+    overflow: hidden;
+    font-size: 14px;
+    background-color: var(--white-background-color); }
+    #documentation.documentation-section .documentation-table td, #documentation.documentation-section .documentation-table th {
+      padding: 1em;
+      border: 1px solid var(--table-border-color); }
+    #documentation.documentation-section .documentation-table th {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color-shade);
+      color: white; }
+    #documentation.documentation-section .documentation-table td {
+      line-height: 1.6em; }
+    #documentation.documentation-section .documentation-table .fixed-column {
+      min-width: 100px; }
+    #documentation.documentation-section .documentation-table .expanded-column {
       width: 80%; }
-
-@media only screen and (min-width: 768px) {
-  .documentation-section .documentation-header-container {
-    width: 50%; }
-  .documentation-section .documentation-image-container sk-loader {
-    width: 60%; } }
+  @media only screen and (min-width: 768px) {
+    #documentation.documentation-section .section-content {
+      margin: 0 4em; }
+    #documentation.documentation-section .image-container > * {
+      width: 80%; }
+    #documentation.documentation-section .fixed-column {
+      white-space: nowrap; } }
 
 footer {
   display: flex;

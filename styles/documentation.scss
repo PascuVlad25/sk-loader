@@ -2,45 +2,143 @@
 @import 'navbar.scss';
 @import 'footer.scss';
 
-.documentation-section {
+#documentation.documentation-section {
     margin-top: calc(70px + 10vh);
     padding: 0 0 25vh 0;
     font-family: var(--font-family);
+    color: var(--text-color-black);
     background-color: var(--white-background-color);
 
-    .documentation-header-container {
-        margin: 2em 0 1em 0;
-        font-size: 28px;
+    .version-text {
+        color: var(--text-color-gray);
     }
 
-    .paragraph-container {
-        margin-bottom: 2em 0;
+    .documentation-section {
+        padding-top: 10vh;
+
+        .section-title {
+            position: relative;
+            transition: padding-left 0.3s ease-in-out;
+
+            .section-anchor {
+                position: absolute;
+                left: 0;
+                color: var(--primary-color);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            &:hover {
+                padding-left: 1em;
+
+                .section-anchor {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .section-content {
+
+            .section-paragraph {
+                color: var(--text-color-gray);
+                line-height: 1.5em;
+            }
+
+            .section-paragraph, .sub-section-content {
+                margin-bottom: 3em;
+            }
+
+            .documentation-property-container {
+                display: flex;
+                align-items: flex-start;
+                gap: 2em;
+                margin-bottom: 4em;
+
+                .documentation-example {
+                    width: 75%;
+                    padding: 1.5em;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    background-color: var(--gray-background-color);
+
+                    h4 {
+                        margin: 1em 0 0 0;
+
+                        &:first-of-type {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+    
+            & > * {
+                height: 250px;
+            }
+        }
     }
 
-    .documentation-image-container {
-        display: flex;
-        justify-content: center;
-        margin: 2em 0;
+    .code-tag {
+        padding: 2px 6px;
+        border-radius: 5px;
+        background-color: var(--tag-secondary-background-color);
 
-        & > * {
-            height: 250px;
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+
+    .documentation-table {
+        width: 100%;
+        border-radius: 10px;
+        border-collapse: collapse;
+        border-style: hidden;
+        box-shadow: inset 0 0 0 1px var(--table-border-color);
+        overflow: hidden;
+        font-size: 14px;
+        background-color: var(--white-background-color);
+        
+        td, th {
+            padding: 1em;
+            border: 1px solid var(--table-border-color);
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color-shade);
+            color: white;
+        }
+
+        td {
+            line-height: 1.6em;
+        }
+
+        .fixed-column {
+            min-width: 100px;
+        }
+
+        .expanded-column {
             width: 80%;
         }
     }
-}
 
-@media only screen and (min-width: 768px) {
-    .documentation-section {
+    @media only screen and (min-width: 768px) {
 
-        .documentation-header-container {
-            width: 50%;
+        .section-content {
+            margin: 0 4em;
+        }
+        
+        .image-container > * {
+            width: 80%;
         }
 
-        .documentation-image-container {
-    
-            sk-loader {
-                width: 60%;
-            }
+        .fixed-column {            
+            white-space: nowrap;
         }
     }
 }

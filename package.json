@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass styles/styles.scss styles.css",
+    "sass-watch": "node-sass styles/styles.scss styles.css -w",
     "build-js": "npx tsc",
     "build": "npm run sass && npm run build-js",
     "analyze": "webpack-bundle-analyzer stats.json"
