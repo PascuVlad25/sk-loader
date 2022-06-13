@@ -2,7 +2,7 @@
 @import 'navbar.scss';
 @import 'footer.scss';
 
-#documentation.documentation-section {
+#documentation.documentation-container {
     margin-top: calc(70px + 10vh);
     padding: 0 0 25vh 0;
     font-family: var(--font-family);
@@ -54,12 +54,13 @@
 
             .documentation-property-container {
                 display: flex;
+                flex-direction: column;
                 align-items: flex-start;
                 gap: 2em;
                 margin-bottom: 4em;
 
                 .documentation-example {
-                    width: 75%;
+                    width: 100%;
                     padding: 1.5em;
                     box-sizing: border-box;
                     border-radius: 10px;
@@ -153,9 +154,17 @@
 
     @media only screen and (min-width: 768px) {
 
-        .section-content {
+        .documentation-section .section-content {
             margin: 0 4em;
-        }
+
+            .documentation-property-container {
+                flex-direction: row;
+    
+                .documentation-example {
+                    width: 75%;
+                }
+            }
+        }        
         
         .image-container > * {
             width: 80%;

@@ -434,49 +434,49 @@ nav {
     page-break-inside: avoid;
     break-inside: avoid; }
   #examples.examples-section .collage-container .image:nth-child(1) {
-    height: 360px;
+    height: 387px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(2) {
-    height: 334px;
+    height: 109px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(3) {
-    height: 161px;
+    height: 289px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(4) {
-    height: 208px;
+    height: 399px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(5) {
-    height: 190px;
+    height: 239px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(6) {
-    height: 373px;
+    height: 338px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(7) {
-    height: 293px;
+    height: 267px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(8) {
-    height: 352px;
+    height: 336px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(9) {
-    height: 270px;
+    height: 357px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(10) {
-    height: 257px;
+    height: 351px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(11) {
-    height: 381px;
+    height: 282px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(12) {
-    height: 276px;
+    height: 131px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(13) {
-    height: 165px;
+    height: 372px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(14) {
-    height: 219px;
+    height: 171px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(15) {
-    height: 129px;
+    height: 383px;
     margin-bottom: 1em; }
 
 @media only screen and (min-width: 768px) {
@@ -688,78 +688,79 @@ footer {
     footer .creator-container .creator-name {
       font-weight: 600; }
 
-#documentation.documentation-section {
+#documentation.documentation-container {
   margin-top: calc(70px + 10vh);
   padding: 0 0 25vh 0;
   font-family: var(--font-family);
   color: var(--text-color-black);
   background-color: var(--white-background-color); }
-  #documentation.documentation-section .version-text {
+  #documentation.documentation-container .version-text {
     color: var(--text-color-gray); }
-  #documentation.documentation-section .documentation-section {
+  #documentation.documentation-container .documentation-section {
     padding-top: 10vh; }
-    #documentation.documentation-section .documentation-section .section-title {
+    #documentation.documentation-container .documentation-section .section-title {
       position: relative;
       transition: padding-left 0.3s ease-in-out; }
-      #documentation.documentation-section .documentation-section .section-title .section-anchor {
+      #documentation.documentation-container .documentation-section .section-title .section-anchor {
         position: absolute;
         left: 0;
         color: var(--primary-color);
         opacity: 0;
         transition: opacity 0.3s ease-in-out; }
-      #documentation.documentation-section .documentation-section .section-title:hover {
+      #documentation.documentation-container .documentation-section .section-title:hover {
         padding-left: 1em; }
-        #documentation.documentation-section .documentation-section .section-title:hover .section-anchor {
+        #documentation.documentation-container .documentation-section .section-title:hover .section-anchor {
           opacity: 1; }
-    #documentation.documentation-section .documentation-section .section-content .section-paragraph {
+    #documentation.documentation-container .documentation-section .section-content .section-paragraph {
       color: var(--text-color-gray);
       line-height: 1.6em; }
-    #documentation.documentation-section .documentation-section .section-content .section-paragraph, #documentation.documentation-section .documentation-section .section-content .sub-section-content {
+    #documentation.documentation-container .documentation-section .section-content .section-paragraph, #documentation.documentation-container .documentation-section .section-content .sub-section-content {
       margin-bottom: 3em; }
-    #documentation.documentation-section .documentation-section .section-content .sub-section-container {
+    #documentation.documentation-container .documentation-section .section-content .sub-section-container {
       margin-top: 6em; }
-    #documentation.documentation-section .documentation-section .section-content .documentation-property-container {
+    #documentation.documentation-container .documentation-section .section-content .documentation-property-container {
       display: flex;
+      flex-direction: column;
       align-items: flex-start;
       gap: 2em;
       margin-bottom: 4em; }
-      #documentation.documentation-section .documentation-section .section-content .documentation-property-container .documentation-example {
-        width: 75%;
+      #documentation.documentation-container .documentation-section .section-content .documentation-property-container .documentation-example {
+        width: 100%;
         padding: 1.5em;
         box-sizing: border-box;
         border-radius: 10px;
         background-color: var(--gray-background-color); }
-        #documentation.documentation-section .documentation-section .section-content .documentation-property-container .documentation-example h4 {
+        #documentation.documentation-container .documentation-section .section-content .documentation-property-container .documentation-example h4 {
           margin: 1em 0 0 0; }
-          #documentation.documentation-section .documentation-section .section-content .documentation-property-container .documentation-example h4:first-of-type {
+          #documentation.documentation-container .documentation-section .section-content .documentation-property-container .documentation-example h4:first-of-type {
             margin: 0; }
-    #documentation.documentation-section .documentation-section .image-container {
+    #documentation.documentation-container .documentation-section .image-container {
       display: flex;
       justify-content: center;
       margin: 2em 0; }
-      #documentation.documentation-section .documentation-section .image-container > * {
+      #documentation.documentation-container .documentation-section .image-container > * {
         height: 250px; }
-  #documentation.documentation-section .code-tag {
+  #documentation.documentation-container .code-tag {
     padding: 2px 6px;
     border-radius: 5px;
     background-color: var(--tag-secondary-background-color); }
-    #documentation.documentation-section .code-tag:hover {
+    #documentation.documentation-container .code-tag:hover {
       color: var(--secondary-color); }
-  #documentation.documentation-section .code-snippet-container {
+  #documentation.documentation-container .code-snippet-container {
     margin-bottom: 2em; }
-    #documentation.documentation-section .code-snippet-container .code-snippet-file-name {
+    #documentation.documentation-container .code-snippet-container .code-snippet-file-name {
       display: inline-block;
       padding: 0.5em 1.5em;
       margin: 0;
       background-color: var(--gray-background-color);
       border-radius: 10px 10px 0 0; }
-    #documentation.documentation-section .code-snippet-container .code-snippet {
+    #documentation.documentation-container .code-snippet-container .code-snippet {
       display: flex;
       padding: 0 2em;
       margin: 0;
       border-radius: 0 10px 10px 10px;
       background-color: var(--gray-background-color); }
-  #documentation.documentation-section .documentation-table {
+  #documentation.documentation-container .documentation-table {
     width: 100%;
     border-radius: 10px;
     border-collapse: collapse;
@@ -768,25 +769,29 @@ footer {
     overflow: hidden;
     font-size: 14px;
     background-color: var(--white-background-color); }
-    #documentation.documentation-section .documentation-table td, #documentation.documentation-section .documentation-table th {
+    #documentation.documentation-container .documentation-table td, #documentation.documentation-container .documentation-table th {
       padding: 1em;
       border: 1px solid var(--table-border-color); }
-    #documentation.documentation-section .documentation-table th {
+    #documentation.documentation-container .documentation-table th {
       background-color: var(--secondary-color-tint);
       border-color: var(--secondary-color-shade);
       color: white; }
-    #documentation.documentation-section .documentation-table td {
+    #documentation.documentation-container .documentation-table td {
       line-height: 1.6em; }
-    #documentation.documentation-section .documentation-table .fixed-column {
+    #documentation.documentation-container .documentation-table .fixed-column {
       min-width: 100px; }
-    #documentation.documentation-section .documentation-table .expanded-column {
+    #documentation.documentation-container .documentation-table .expanded-column {
       width: 80%; }
   @media only screen and (min-width: 768px) {
-    #documentation.documentation-section .section-content {
+    #documentation.documentation-container .documentation-section .section-content {
       margin: 0 4em; }
-    #documentation.documentation-section .image-container > * {
+      #documentation.documentation-container .documentation-section .section-content .documentation-property-container {
+        flex-direction: row; }
+        #documentation.documentation-container .documentation-section .section-content .documentation-property-container .documentation-example {
+          width: 75%; }
+    #documentation.documentation-container .image-container > * {
       width: 80%; }
-    #documentation.documentation-section .fixed-column {
+    #documentation.documentation-container .fixed-column {
       white-space: nowrap; } }
 
 footer {
