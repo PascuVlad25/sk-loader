@@ -349,7 +349,7 @@ nav {
     align-items: center;
     box-sizing: border-box;
     padding: 4em 0 6em 0;
-    background-color: var(--secondary-color);
+    background-image: linear-gradient(135deg, var(--secondary-color), var(--secondary-color-shade));
     box-shadow: 0 25px 60px -30px var(--secondary-color);
     border-radius: 20px;
     font-size: 20px;
@@ -434,49 +434,49 @@ nav {
     page-break-inside: avoid;
     break-inside: avoid; }
   #examples.examples-section .collage-container .image:nth-child(1) {
-    height: 185px;
+    height: 235px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(2) {
-    height: 330px;
+    height: 386px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(3) {
-    height: 134px;
+    height: 368px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(4) {
-    height: 175px;
+    height: 101px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(5) {
-    height: 360px;
+    height: 170px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(6) {
-    height: 160px;
+    height: 205px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(7) {
-    height: 173px;
+    height: 314px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(8) {
-    height: 245px;
+    height: 339px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(9) {
-    height: 263px;
+    height: 361px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(10) {
-    height: 250px;
+    height: 163px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(11) {
-    height: 134px;
+    height: 266px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(12) {
-    height: 141px;
+    height: 374px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(13) {
-    height: 364px;
+    height: 196px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(14) {
-    height: 393px;
+    height: 364px;
     margin-bottom: 1em; }
   #examples.examples-section .collage-container .image:nth-child(15) {
-    height: 143px;
+    height: 394px;
     margin-bottom: 1em; }
 
 @media only screen and (min-width: 768px) {
