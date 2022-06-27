@@ -4,9 +4,11 @@
   "description": "sk-loader library presentation website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass styles/styles.scss styles.css",
-    "sass-watch": "node-sass styles/styles.scss styles.css -w",
+    "sass": "node-sass styles/styles.scss dist/styles.css",
+    "sass-watch": "node-sass styles/styles.scss dist/styles.css -w",
+    "minify-images": "imagemin assets/icons/* --out-dir=dist/assets/icons && imagemin assets/img/* --out-dir=dist/assets/img",
     "build-js": "npx tsc",
+    "rollup": "rollup --config",
     "build": "npm run sass && npm run build-js",
     "analyze": "webpack-bundle-analyzer stats.json"
   },
@@ -15,8 +17,20 @@
   ],
   "author": "Vlad Pascu",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "imagemin-cli": "^7.0.0",
+    "lottie-web": "^5.9.4",
     "node-sass": "^7.0.1",
+    "rollup": "^2.75.7",
+    "rollup-plugin-imagemin": "^0.4.1",
+    "rollup-plugin-minify-html": "^0.1.2",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
     "typescript": "^4.7.3"
   }
 }

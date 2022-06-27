@@ -1,5 +1,6 @@
-
 const copyButton = document.getElementById('installation-copy-button');
+
+copyButton?.addEventListener('click', () => copyCommand());
 
 function copyCommand(): void {
     navigator.clipboard.writeText('npm install sk-loader');

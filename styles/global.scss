@@ -6,6 +6,7 @@ html {
   
   body {
       margin: 0;
+      color: var(--text-color);
   
       a {
           text-decoration: none;
@@ -21,23 +22,68 @@ html {
       --secondary-color-shade: #433eb2;
       --navbar-background-color: var(--secondary-color);
       --white-background-color: white;
-      --gray-background-color: #f8f8f8;
+      --light-gray-background-color: #f8f8f8;
+      --gray-background-color: #d3d3d3;
+      --dark-gray-background-color: #1f1f1f;
+      --dark-background-color: #181818;
+      --background-color: var(--white-background-color);
+      --second-background-color: var(--light-gray-background-color);
       --tag-secondary-background-color: #f6f8fc;
 
-      --text-color: white;
+      --text-color-white: white;
       --text-color-black: #191919;
       --text-color-gray: #505050;
+      --text-color: var(--text-color-black);
       --text-hover-color: rgb(246, 246, 246);
 
       --table-border-color: #d3d3d3;
   
       --warning-color: #d6692e;
-      --warning-background: #ffecc7;
+      --warning-color-tint: #ffecc7;
 
       --box-shadow: rgb(76 76 80 / 10%) 0px 30px 70px -10px, rgb(0 0 0 / 20%) 0px 20px 40px -30px;
   
       // font
       --font-family: 'Roboto', sans-serif;
+
+      &.dark-theme {
+        --background-color: var(--dark-background-color);
+        --second-background-color: var(--dark-gray-background-color);
+        --gray-background-color: #222222;
+        --text-color: var(--text-color-white);
+        --box-shadow: none;
+
+        --sk-loader-background: #303030;
+        --sk-loader-highlight: rgba(255, 255, 255, 0),
+                                rgb(60, 60, 60),
+                                rgba(255, 255, 255, 0);
+                            
+        #comparator-container.card-container {
+            .slider {
+                background-color: var(--primary-color);
+            }
+            
+            .resizer {
+                background-color: var(--secondary-color-tint);
+            }
+        } 
+
+        .warning-container {
+            background-color: var(--warning-color);
+
+            .warning-header {
+                color: var(--text-color-white);
+            }
+
+            .warning-message {
+                color: var(--warning-color-tint);
+            }
+
+            &::before {
+                background-image: url('assets/icons/triangle-exclamation-solid-white.svg');
+            }
+        }
+      }
   
       @media only screen and (max-width: 768px) {
           --content-max-width: 90vw;
@@ -54,7 +100,7 @@ html {
   
   .container {    
       width: 100%;
-      background-color: var(--gray-background-color);
+      background-color: var(--second-background-color);
       padding: 10vh 0 5vh 0;
   
       .content {        
@@ -71,7 +117,7 @@ html {
   
   .main-container {
       font-family: var(--font-family);
-      background-color: var(--gray-background-color);
+      background-color: var(--second-background-color);
   
       .page-container {
           display: flex;
@@ -111,8 +157,8 @@ html {
               padding: 30px;
               margin: 0 20px;
               border-radius: 15px;
-              background-color: white;
-              box-shadow: rgba(76, 76, 80, 0.1) 0px 30px 70px -10px, rgba(0, 0, 0, 0.2) 0px 20px 40px -30px;
+              background-color: var(--background-color);
+              box-shadow: var(--box-shadow);
               box-sizing: border-box;
   
               .image {
@@ -146,7 +192,7 @@ html {
       padding: 1.5em;
       display: flex;
       align-items: center;
-      background-color: var(--warning-background);
+      background-color: var(--warning-color-tint);
       border-radius: 10px;
   
       .warning-header {
@@ -156,6 +202,7 @@ html {
       }
   
       .warning-message {
+          color: var(--text-color-black);
           font-size: 12px;
       }
   

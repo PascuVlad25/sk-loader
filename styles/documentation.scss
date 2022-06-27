@@ -19,6 +19,11 @@
         .section-title {
             position: relative;
             transition: padding-left 0.3s ease-in-out;
+            color: var(--text-color);
+
+            &:hover {
+                text-decoration: underline;
+            }
 
             .section-anchor {
                 position: absolute;
@@ -64,13 +69,13 @@
                     padding: 1.5em;
                     box-sizing: border-box;
                     border-radius: 10px;
-                    background-color: var(--gray-background-color);
+                    background-color: var(--second-background-color);
 
                     h4 {
                         margin: 1em 0 0 0;
 
                         &:first-of-type {
-                            margin: 0;
+                            margin-top: 0;
                         }
                     }
                 }
@@ -105,7 +110,7 @@
             display: inline-block;
             padding: 0.5em 1.5em;
             margin: 0;
-            background-color: var(--gray-background-color);
+            background-color: var(--second-background-color);
             border-radius: 10px 10px 0 0 ;
         }
 
@@ -114,7 +119,7 @@
             padding: 0 2em;
             margin: 0;
             border-radius: 0 10px 10px 10px;
-            background-color: var(--gray-background-color);
+            background-color: var(--second-background-color);
         }
     }
 
@@ -134,7 +139,7 @@
         }
 
         th {
-            background-color: var(--gray-background-color);
+            background-color: var(--second-background-color);
         }
 
         td {
@@ -147,6 +152,51 @@
 
         .expanded-column {
             width: 80%;
+        }
+    }
+
+    .documentation-css-examples {
+        width: 100%;
+        border-radius: 10px;
+        background-color: var(--second-background-color);
+        overflow: hidden;
+
+        h4 {
+            margin: 1em 0 0.5em 0;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        .dark-container {
+            padding: 1.5em;
+            box-sizing: border-box;
+            color: var(--text-color-white);        
+            background-color: var(--dark-background-color);
+            --sk-loader-background: rgb(82, 82, 82);
+            --sk-loader-highlight: rgba(255, 255, 255, 0),
+                                rgb(104, 104, 104),
+                                rgba(255, 255, 255, 0);
+        }
+
+        .light-container {            
+            padding: 1.5em;
+            box-sizing: border-box;
+        }
+
+        .sharp-border-radius {
+            --sk-loader-border-radius: 0;
+        }
+
+        .fast-animation-time {
+            --sk-loader-animation-time: 1s
+        }
+
+        sk-loader-image {
+            height: 100px; 
+            width: 80%; 
+            margin: 0 auto;
         }
     }
 

@@ -23,7 +23,7 @@ nav {
         .logo {
             display: none;
             text-decoration: none;
-            color: var(--text-color);
+            color: var(--text-color-white);
             cursor: pointer;
 
             &:hover {
@@ -33,6 +33,7 @@ nav {
 
         .nav-buttons-container {
             display: flex;
+            align-items: center;
             gap: 1em;
 
             .nav-button {
@@ -40,12 +41,29 @@ nav {
                 text-align: center;
                 line-height: 50px;
                 text-decoration: none;
-                color: var(--text-color);
+                color: var(--text-color-white);
                 padding: 0 1.5em;
                 border-radius: 6px;
 
                 &:hover {
                     background-color: var(--secondary-color-tint);
+                }
+            }
+
+            .theme-toggle {
+                width: 24px;
+                height: 24px;
+                background-color: var(--white-background-color);
+                background-image: url('assets/icons/sun-solid.svg');
+                background-position: center;
+                background-size: 16px 16px;
+                background-repeat: no-repeat;
+                border-radius: 6px;
+                cursor: pointer;
+
+                &.dark {
+                    background-color: var(--dark-background-color);
+                    background-image: url('assets/icons/moon-solid.svg');
                 }
             }
         }

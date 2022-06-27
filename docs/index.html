@@ -1,94 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sk-loader | Docs</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.1/dist/sk-loader/sk-loader.css">
-    <link href="https://www.unpkg.com/prismjs@v1.28.0/themes/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css">
-
-    <script type="module">
-        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.1/loader/index.es2017.js';
-        defineCustomElements();
-    </script>
-</head>
-<body>
-    <nav>
-        <div class="navbar-content">
-            <a href="./" class="logo"><h2>sk-loader docs</h2></a>
-            <span class="nav-buttons-container">
-                <a href="../" class="nav-button">Home</a>
-                <a href="./" class="nav-button">Guide</a>
-                <a href="components" class="nav-button">Components</a>
-            </span>
-        </div>        
-    </nav>
-    
-    <div id="documentation" class="container documentation-container">
-        <div class="content documentation-content">
-            <h1 class="title documentation-main-title">Getting Started</h1>
-            <p class="version-text">sk-loader &#149; version 2.1.1</p>
-
-            <section id="installation" class="documentation-section">
-
-                <h2 class="section-title">
-                    <a href="#installation" class="section-anchor" aria-hidden="true">#</a>
-                    Installation
-                </h2>
-                <div class="section-content">
-                    <div class="section-paragraph">
-                        <p>
-                            This step applies only to project managed with <code class="code-tag">npm</code>. 
-                            If you have a plain/vanilla JavaScript project or a static website not managed by <code class="code-tag">npm (node package manager)</code> skip to the next step at 
-                            <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a> section.
-                        </p>
-                        <p>
-                            Copy the installation command below, paste it in your terminal, run it and let the magic begins. Make sure to be in the root folder of your project.
-                        </p>
-                        <div class="code-container">
-                            <code>$ npm install sk-loader</code>
-                            <span id="installation-copy-button" onclick="copyCommand()" class="copy-button">Copy</span>
-                        </div>
-                    </div>
-                </div> 
-
-            </section>
-            
-            <section id="setup" class="documentation-section">
-
-                <h2 class="section-title">
-                    <a href="#setup" class="section-anchor" aria-hidden="true">#</a>
-                    Package Setup
-                </h2>
-                <div class="section-content">
-
-                    <div class="section-paragraph">
-                        <p>
-                            The setup depends on the project's framework. Below are presented the setup instructions for <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a>, 
-                            <a href="#angular" class="paragraph-hyperlink">Angular</a> and <a href="#react" class="paragraph-hyperlink">React</a>. The <code class="code-tag">sk-loader</code> package is a collection of web components so it 
-                            works with any type of framework. If you don't find your project's framework in the list, use the <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a> approach.
-                            More setup instructions for diffrent frameworks are yet to be added.
-                        </p>
-                    </div>
-        
-                    <div id="javascript" class="sub-section-container anchor-scroll">
-                        <h2 class="section-title">
-                            <a href="#javascript" class="section-anchor" aria-hidden="true">#</a>
-                            Javascript - plain website/app
-                        </h2>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">index.html</p>
-                            <pre class="code-snippet">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>sk-loader | Docs</title><link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.2/dist/sk-loader/sk-loader.css"><link href="https://www.unpkg.com/prismjs@v1.28.0/themes/prism.css" rel="stylesheet"><link rel="stylesheet" href="../styles.css"><script type="module">import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.2/loader/index.es2017.js';
+        defineCustomElements();</script><script src="../js/code-copy.min.js" defer="defer"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-EEH38TRKE1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EEH38TRKE1")</script></head><body><nav><div class="navbar-content"><a href="./" class="logo"><h2>sk-loader docs</h2></a><span class="nav-buttons-container"><a href="../" class="nav-button">Home</a> <a href="./" class="nav-button">Guide</a> <a href="components" class="nav-button">Components</a></span></div></nav><div id="documentation" class="container documentation-container"><div class="content documentation-content"><h1 class="title documentation-main-title">Getting Started</h1><p class="version-text">sk-loader &#149; version 2.1.2</p><section id="installation" class="documentation-section"><a href="#installation"><h2 class="section-title"><span class="section-anchor" aria-hidden="true">#</span> Installation</h2></a><div class="section-content"><div class="section-paragraph"><p>This step applies only to project managed with <code class="code-tag">npm</code>. If you have a plain/vanilla JavaScript project or a static website not managed by <code class="code-tag">npm (node package manager)</code> skip to the next step at <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a> section.</p><p>Copy the installation command below, paste it in your terminal, run it and let the magic begins. Make sure to be in the root folder of your project.</p><div class="code-container"><code>$ npm install sk-loader</code> <span id="installation-copy-button" class="copy-button">Copy</span></div></div></div></section><section id="setup" class="documentation-section"><a href="#setup"><h2 class="section-title"><span class="section-anchor" aria-hidden="true">#</span> Package Setup</h2></a><div class="section-content"><div class="section-paragraph"><p>The setup depends on the project's framework. Below are presented the setup instructions for <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a>, <a href="#angular" class="paragraph-hyperlink">Angular</a> and <a href="#react" class="paragraph-hyperlink">React</a>. The <code class="code-tag">sk-loader</code> package is a collection of web components so it works with any type of framework. If you don't find your project's framework in the list, use the <a href="#javascript" class="paragraph-hyperlink">Javascript - plain website/app</a> approach. More setup instructions for diffrent frameworks are yet to be added.</p></div><div id="javascript" class="sub-section-container anchor-scroll"><a href="#javascript"><h2 class="section-title"><span class="section-anchor" aria-hidden="true">#</span> Javascript - plain website/app</h2></a><div class="code-snippet-container"><p class="code-snippet-file-name">index.html</p><pre class="code-snippet">
                                 <code class="language-html">
 &#60;head&#62;
     ...
-    &#60;link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.1/dist/sk-loader/sk-loader.css"&#62;
+    &#60;link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.2/dist/sk-loader/sk-loader.css"&#62;
     &#60;script type="module"&#62;
-        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.1/loader/index.es2017.js';
+        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.2/loader/index.es2017.js';
         defineCustomElements();
     &#60;/script&#62;
 &#60;/head&#62;
@@ -99,19 +16,7 @@
     ...
 &#60;/body&#62;
                                 </code>
-                            </pre>
-                        </div>
-                    </div>
-                    
-                    <div id="angular" class="sub-section-container anchor-scroll">
-                        <h2 class="section-title">
-                            <a href="#angular" class="section-anchor" aria-hidden="true">#</a>
-                            Angular app
-                        </h2>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">app.module.ts</p>
-                            <pre class="code-snippet">
+                            </pre></div></div><div id="angular" class="sub-section-container anchor-scroll"><a href="#angular"><h2 class="section-title"><span class="section-anchor" aria-hidden="true">#</span> Angular app</h2></a><div class="code-snippet-container"><p class="code-snippet-file-name">app.module.ts</p><pre class="code-snippet">
                                 <code class="language-ts">
 @NgModule({
     ...
@@ -120,12 +25,7 @@
 })
 export class AppModule {}
                                 </code>
-                            </pre>
-                        </div>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">main.ts</p>
-                            <pre class="code-snippet">
+                            </pre></div><div class="code-snippet-container"><p class="code-snippet-file-name">main.ts</p><pre class="code-snippet">
                                 <code class="language-ts">
 // other imports
 ...
@@ -135,12 +35,7 @@ import { defineCustomElements } from 'sk-loader/loader';
 ...
 defineCustomElements(window);
                                 </code>
-                            </pre>
-                        </div>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">angular.json</p>
-                            <pre class="code-snippet">
+                            </pre></div><div class="code-snippet-container"><p class="code-snippet-file-name">angular.json</p><pre class="code-snippet">
                                 <code class="language-json">
 {
     "build": {
@@ -151,12 +46,7 @@ defineCustomElements(window);
     }
 }
                                 </code>
-                            </pre>
-                        </div>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">new-component.component.html</p>
-                            <pre class="code-snippet">
+                            </pre></div><div class="code-snippet-container"><p class="code-snippet-file-name">new-component.component.html</p><pre class="code-snippet">
                                 <code class="language-html">
 &#60;div class="container"&#62;
     &#60;!-- Use it before the content loads --&#62;
@@ -166,19 +56,7 @@ defineCustomElements(window);
     &#60;/p&#62;
 &#60;/div&#62;
                                 </code>
-                            </pre>
-                        </div>
-                    </div>
-                    
-                    <div id="react" class="sub-section-container anchor-scroll">
-                        <h2 class="section-title">
-                            <a href="#react" class="section-anchor" aria-hidden="true">#</a>
-                            React app
-                        </h2>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">index.js</p>
-                            <pre class="code-snippet">
+                            </pre></div></div><div id="react" class="sub-section-container anchor-scroll"><a href="#react"><h2 class="section-title"><span class="section-anchor" aria-hidden="true">#</span> React app</h2></a><div class="code-snippet-container"><p class="code-snippet-file-name">index.js</p><pre class="code-snippet">
                                 <code class="language-js">
 // other imports
 ...
@@ -189,47 +67,19 @@ import { defineCustomElements } from 'sk-loader/loader';
 ...
 defineCustomElements();
                                 </code>
-                            </pre>
-                        </div>
-
-                        <div class="code-snippet-container">
-                            <p class="code-snippet-file-name">new-component.tsx</p>
-                            <pre class="code-snippet">
+                            </pre></div><div class="code-snippet-container"><p class="code-snippet-file-name">new-component.tsx</p><pre class="code-snippet">
                                 <code class="language-tsx">
 function NewComponent() {
     return (
         &#60;div className="container"&#62;
             { isLoading ? 
-                &#60;sk-loader-text rows="2" indent&#62;&#60;sk-loader-text&#62;:
+                &#60;sk-loader-text rows="2" indent /&#62; :
                 &#60;p className="text-indent"&#62;
                     { 'This dynamic text comes from the server' }
                 &#60;/p&#62;
-            }        
+            }
         &#60;/div&#62;
     );
 }
                                 </code>
-                            </pre>
-                        </div>                   
-                    </div>
-                </div>
-
-            </section>    
-        </div>
-    </div>
-
-    <footer>
-        <a href="https://vladpascu.com" target="_blank" class="creator-container">
-            <img src="../assets/img/creator.png" width="40" height="40" class="creator-image">
-            <div>
-                <div class="creator-text">Created by</div>
-                <div class="creator-name">Vlad Pascu</div>
-            </div>
-        </a>
-    </footer>
-    
-    <script src="../js/code-copy.js"></script>
-    <script src="https://www.unpkg.com/prismjs@v1.28.0/components/prism-core.min.js"></script>
-	<script src="https://www.unpkg.com/prismjs@v1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
-</body>
-</html>
+                            </pre></div></div></div></section></div></div><footer><a href="https://vladpascu.com" target="_blank" class="creator-container"><img src="../assets/img/creator.png" width="40" height="40" class="creator-image"><div><div class="creator-text">Created by</div><div class="creator-name">Vlad Pascu</div></div></a></footer><script src="https://www.unpkg.com/prismjs@v1.28.0/components/prism-core.min.js"></script><script src="https://www.unpkg.com/prismjs@v1.28.0/plugins/autoloader/prism-autoloader.min.js"></script></body></html>

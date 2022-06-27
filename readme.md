@@ -20,9 +20,9 @@ index.html
 ```html 
 <head>
     ...
-    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.1/dist/sk-loader/sk-loader.css">
+    <link rel="stylesheet" href="https://unpkg.com/sk-loader@2.1.2/dist/sk-loader/sk-loader.css">
     <script type="module">
-        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.1/loader/index.es2017.js';
+        import { defineCustomElements } from 'https://unpkg.com/sk-loader@2.1.2/loader/index.es2017.js';
         defineCustomElements();
     </script>
 </head>
@@ -98,7 +98,7 @@ function NewComponent() {
   return (
     <div className="container">
         { isLoading ? 
-            <sk-loader-text rows="2" indent><sk-loader-text>:
+            <sk-loader-text rows="2" indent /> :
             <p className="text-indent">
                 { 'This dynamic text comes from the server' }
             </p>
